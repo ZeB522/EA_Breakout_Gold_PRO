@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📝 Meu To-Do List</h1>
+            <p class="subtitle">Organize suas tarefas com facilidade</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Adicione uma nova tarefa..."
+                    autofocus
+                >
+                <button id="addBtn" class="add-btn">
+                    <span>➕</span> Adicionar
+                </button>
+            </div>
+            <div class="quick-filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="active">Ativas</button>
+                <button class="filter-btn" data-filter="completed">Concluídas</button>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <span class="stat-label">Total</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Ativas</span>
+                <span class="stat-value active" id="activeCount">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Concluídas</span>
+                <span class="stat-value completed" id="completedCount">0</span>
+            </div>
+        </div>
+
+        <!-- Tasks List -->
+        <main class="tasks-container">
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be added here -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <p>🎉 Nenhuma tarefa! Adicione uma para começar.</p>
+            </div>
+        </main>
+
+        <!-- Action Buttons -->
+        <footer class="footer">
+            <button id="clearCompletedBtn" class="action-btn danger" style="display: none;">
+                🗑️ Limpar Concluídas
+            </button>
+            <button id="exportBtn" class="action-btn primary">
+                📥 Exportar
+            </button>
+            <button id="importBtn" class="action-btn primary">
+                📤 Importar
+            </button>
+            <input type="file" id="fileInput" accept=".json" style="display: none;">
+            <button id="clearAllBtn" class="action-btn danger">
+                🧹 Limpar Tudo
+            </button>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
