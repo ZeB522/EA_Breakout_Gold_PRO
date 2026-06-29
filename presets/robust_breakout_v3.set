@@ -1,0 +1,57 @@
+; Robust Breakout v3.00 - Preset (informational)
+; Para usar este arquivo como referência ao criar um .set no MetaTrader, adapte o formato no MetaEditor > Inputs.
+
+; Core strategy
+RangeCandles=35
+RSIPeriod=14
+RSIBuyLevel=58.0
+RSISellLevel=42.0
+EMAPeriodFast=50
+EMAPeriodSlow=200
+ADXPeriod=14
+ADXThreshold=25.0
+MinChannelWidthPoints=60
+UseVolumeFilter=true
+VolumeAvgPeriod=20
+VolumeMultiplier=1.2
+
+; Risk management
+RiskPercent=0.25
+UseEquityForRisk=true
+BufferPoints=18.0
+ATRMultiplierSL=2.0
+ATRMultiplierTP=3.0
+RiskRewardRatio=2.8
+MaxDailyDrawdown=3.0
+DailyProfitLimitPercent=3.0
+MaxSpread=35.0
+MaxMarginUsagePercent=50.0
+
+; Trade management
+BreakevenPoints=180
+TrailingStart=250
+TrailingStep=120
+ATRTrailingMultiplier=1.0
+PartialCloseRatio=0.5
+AggressiveTrailingAfterR=2.0
+
+; Limits & mode
+MaxConsecutiveLosses=3
+ConservativeMode=true
+MaxTradesPerDay=3
+
+; System
+StartHour=9
+EndHour=19
+MagicNumber=1234567
+Slippage=3
+EnableLogging=true
+RetryOrderSendCount=4
+RetryDelayMs=600
+
+; Trading session preset
+TradingSession=3 ; 0=ALL,1=London,2=NY,3=London+NY,4=Custom
+CustomSessionStartH=9
+CustomSessionEndH=19
+
+; --- End of preset ---
